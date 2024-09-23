@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> nehan</title>
+        <style>
+            /*style the element with id"ruhi"*/
+            #ruhi{
+                background-color: yellow;
+                color: red;
+                padding: 40px;
+                text-align: center;
+            }
+            /*style the element with class name"city"*/
+            .city{
+                background-color: purple;
+                color: white;
+                padding: 10px;
+            }
+            </style>
+        </head>
+            <body>
+                 
+
+    <h1 id="ruhi"><b>MY CITY</b></h1>
+        <h2 class="city">BANGALORE</h2>
+        <p id="demo">which is capital of karnataka</p>
+
+        <script>
+            function myFunction(){
+          document.getElementById("demo").innerHTML="BANGALOR IS THE CAPITAL OF KARANATAKA"; 
+            }
+          function myFunction1(){
+          document.getElementById("demo1").innerHTML="is the capital of ap";
+            }
+            function Ruhi(){
+                document.getElementById("demo2").innerHTML="HYDERBAD IS THE CAPITAL OF TELENGANA";
+            }
+        </script>
+        <button type="button" id="demo" onclick="myFunction()" >click me</button>
+            <h2 class="city">ANTAPURAMU</h2>
+            <p id="demo1"></p>
+            <p id="demo1">which is capital of ananthapur</p>
+        <button type="button" id="demo1" onclick="myFunction1()">click</button>
+            <h2 class="city">HYDERABAD</h2>
+            <p id="demo2"></p>
+            <p id="demo2">which is the capital of hyderbad</p>
+                <button type="button" id="demo2" onclick="Ruhi()">click</button>
+                </head>
+        </body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create 5 Multiplication Tables with JavaScript</title>
+</head>
+<body>
+    <div id="tables-container"></div> <!-- Container for the multiplication tables -->
+
+    <script>
+        // Get the container where the tables will be placed
+        const container = document.getElementById('tables-container');
+
+        // Loop to create 5 multiplication tables
+        for (let i = 1; i <= 5; i++) {
+            // Create a new table element
+            const table = document.createElement('table');
+            table.border = '1'; // Add a border to the table
+
+            // Create a table header row
+            const headerRow = table.insertRow();
+            const headerCell = headerRow.insertCell();
+            headerCell.colSpan = 2; // Assuming 2 columns: one for multiplier and one for result
+            headerCell.textContent = `Multiplication Table of ${i}`;
+
+            // Create the multiplication table (1 to 10)
+            for (let j = 1; j <= 10; j++) {
+                const row = table.insertRow(); // Create a new row
+
+                const multiplierCell = row.insertCell(); // First cell: multiplier
+                multiplierCell.textContent = `${i} x ${j}`;
+
+                const resultCell = row.insertCell(); // Second cell: result
+                resultCell.textContent = `${i * j}`;
+            }
+            container.appendChild(table);
+            container.appendChild(document.createElement('br'));
+        }
+    </script>
+    </body>

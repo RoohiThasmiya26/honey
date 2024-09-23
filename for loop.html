@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>javascript loop</title>
+    <style>
+        *{
+            color: black;
+            border-color: blueviolet;
+            background-color: aqua;
+
+        }
+        h1{
+            text-align: center;
+            color: black;
+            font-style: oblique;
+        }
+    </style>
+    
+</head>
+<body> 
+    <h1>javascript loop model</h1>
+<div id="table-container"></div>
+<script>
+    function chinnu(rows, columns) {
+        let table = document.createElement('table');
+        table.border = '2';
+        let tbody = document.createElement('tbody');
+        for (let i = 0; i < rows; i++) {
+            let tr = document.createElement('tr');
+            for (let j = 0; j < columns; j++) {
+                let td = document.createElement('td');
+                td.textContent = `roohi ${i+1}, chinnu ${j+1}`;
+                tr.appendChild(td);
+            }
+            tbody.appendChild(tr);
+        }
+        table.appendChild(tbody);
+        document.getElementById('table-container').appendChild(table);
+    }
+    chinnu(5, 3); 
+</script>
+</body>
+</html>
